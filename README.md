@@ -55,9 +55,53 @@ I want to be able to delete my posts
 ![Home wireframe](images/home.png)
 ![Profile wireframe](images/profile.png)
 
-<!--
+
 ### Domain model
 
+#### CLASS: User
+| Functions                             | Attributes     |
+| ---------------                       | -------------- |
+| initialize(create)                    |  name, email, password, IDE, languages, country, LinkedIn, Twitter, GitHub |
+| edit_info()                           |
+| Class methods:                        |
+| self.create(name:, email:, password:) |
+| self.find(id:)                        |
+| self.authenticate(email:, password:)  |
+
+| USER TABLE |    
+| --------------- |                     
+| id SERIAL PRIMARY KEY | 
+| name VARCHAR(50) | 
+| email VARCHAR(50) |
+| password VARCHAR | 
+| IDE VARCHAR(25) | 
+| languages VARCHAR(30) | 
+| country VARCHAR(40) | 
+| LinkedIn VARCHAR(80) | 
+| Twitter VARCHAR(80) | 
+| GitHub VARCHAR(80) |
+
+
+
+#### CLASS: Post
+| Functions                            | Attributes     |
+| ---------------                      | -------------- |
+| initialize(create)                   | body, image    |
+| select_all()                         |                |
+| edit()                               |                |
+| delete()                             |                |
+
+
+| POST TABLE |    
+| ----------------------|                      
+| id SERIAL PRIMARY KEY |
+| date_and_time TIMESTAMP | 
+| user_id FOREIGN KEY | 
+| body VARCHAR | 
+| image BINARY |
+
+
+<!--
 ## Quickstart
 
 First, clone this repository. Then:
