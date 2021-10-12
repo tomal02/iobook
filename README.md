@@ -25,8 +25,39 @@ We used a Trello board to organise our workflow, you can find it [here](https://
 
 <!--
 ### Domain model
+
+
 ### User stories
 ```
+As a programmer
+So I can join the network
+I want to be able to sign up 
+
+As a programmer
+So that I can access my account
+I want to be able to log in 
+
+As a user
+So that I can update my status
+I want to be able to write a new post
+
+As a user
+So that I can view all my posts
+I want to be able to visit my profile
+
+As a user
+So I can see when posts were written
+I want my feed to be organised chronologically by most recent
+
+As a user
+In case I make a spelling mistake 
+I want to be able to update my posts
+
+As a user 
+If I post something by accident
+I want to be able to delete my posts
+
+
 ```
 ## Quickstart
 
