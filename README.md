@@ -2,6 +2,10 @@
 
 A social platform for software developers.
 
+### The team
+
+[![Tom](images/github-logo.png)](https://github.com/tomal02) Tom | [![Ifrah](images/github-logo.png)](https://github.com/Ifrahhssn) Ifrah | [![Jordan](images/github-logo.png)](https://github.com/jordanveness) Jordan | [![Shakira](images/github-logo.png)](https://github.com/rhianekobar) Shakira | [![Lilly](images/github-logo.png)](https://github.com/lildann) Lilly | [![Boris](images/github-logo.png)](https://github.com/borisl16) Boris
+
 #### Heroku link
 
 https://iobook.herokuapp.com
