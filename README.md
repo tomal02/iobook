@@ -1,4 +1,6 @@
-# AceBook
+# IOBook
+
+A social platform for software developers.
 
 #### Heroku link
 
