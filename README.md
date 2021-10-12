@@ -9,8 +9,14 @@ https://iobook.herokuapp.com
 #### Trello Board
 
 https://trello.com/b/hf33wxGn/acebook-project
+## Planning
+### Wireframe
+![Login wireframe](images/IOBook-login-wireframe.png)
 
 <!--
+### Domain model
+### User stories
+
 ## Quickstart
 
 First, clone this repository. Then:
