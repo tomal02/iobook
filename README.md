@@ -19,14 +19,6 @@ You can use a hosted version of IOBook at Heroku [here](https://iobook.herokuapp
 
 We used a Trello board to organise our workflow, you can find it [here](https://trello.com/b/hf33wxGn/acebook-project)
 
-### Wireframe
-
-![Login wireframe](images/welcome-wireframe.png)
-
-<!--
-### Domain model
-
-
 ### User stories
 ```
 As a programmer
@@ -56,9 +48,16 @@ I want to be able to update my posts
 As a user 
 If I post something by accident
 I want to be able to delete my posts
-
-
 ```
+### Wireframe
+
+![Login wireframe](images/welcome-wireframe.png)
+![Home wireframe](images/home.png)
+![Profile wireframe](images/profile.png)
+
+<!--
+### Domain model
+
 ## Quickstart
 
 First, clone this repository. Then:
