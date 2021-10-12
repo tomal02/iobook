@@ -2,19 +2,22 @@
 
 A social platform for software developers.
 
-### The team
+## The team
 
 [![Tom](images/github-logo.png)](https://github.com/tomal02) Tom | [![Ifrah](images/github-logo.png)](https://github.com/Ifrahhssn) Ifrah | [![Jordan](images/github-logo.png)](https://github.com/jordanveness) Jordan | [![Shakira](images/github-logo.png)](https://github.com/rhianekobar) Shakira | [![Lilly](images/github-logo.png)](https://github.com/lildann) Lilly | [![Boris](images/github-logo.png)](https://github.com/borisl16) Boris
 
-#### Heroku link
+## How to use
 
-https://iobook.herokuapp.com
+#### Hosted on Heroku
+You can use a hosted version of IOBook at Heroku [here](https://iobook.herokuapp.com)
+
+<!-- ### Run locally -->
+
+## Planning
 
 #### Trello Board
 
-https://trello.com/b/hf33wxGn/acebook-project
-
-## Planning
+We used a Trello board to organise our workflow, you can find it [here](https://trello.com/b/hf33wxGn/acebook-project)
 
 ### Wireframe
 
@@ -23,7 +26,8 @@ https://trello.com/b/hf33wxGn/acebook-project
 <!--
 ### Domain model
 ### User stories
-
+```
+```
 ## Quickstart
 
 First, clone this repository. Then:
