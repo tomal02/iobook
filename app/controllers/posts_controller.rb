@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+
+  # THIS IS A TEST COMMIT
   def new
     @post = Post.new
   end
