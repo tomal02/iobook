@@ -1,12 +1,9 @@
 <%= link_to new_post_path do %>
   New post
 <% end %>
-
-
 <% @posts.each do |post| %>
   <p><%= post.message   %></p>
   <p><%= post.created_at %></p>
+  <%= link_to 'Edit post', edit_post_path(post.id) %><br>
+  <%= link_to 'Delete post', post_path(post.id), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
 <% end %>
-
-
-
