@@ -6,6 +6,7 @@
 <% @posts.each do |post| %>
   <p><%= post.message   %></p>
   <p><%= post.created_at %></p>
+  <%= link_to "Edit post", edit_post_path(post.id) %>
 <% end %>
 
 
