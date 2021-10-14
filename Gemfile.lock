@@ -86,6 +86,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     docile (1.4.0)
+    email_validator (2.2.3)
+      activemodel
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.0)
@@ -249,6 +251,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   devise
+  email_validator
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg
