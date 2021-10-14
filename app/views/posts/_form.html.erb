@@ -1,0 +1,17 @@
+<%= form_with model: @post do |form| %>
+<div>
+    <%= form.label :message %><br>
+    <%= form.text_field :message %>
+    <% @post.errors.full_messages_for(:message).each do |post| %>
+    <div><%= post %></div>
+    <% end %>
+    <%= link_to posts_path(@post) do %>
+ <% end %>
+
+    <%= form.submit "Submit" %>
+   
+
+</div>
+
+<% end %>
+

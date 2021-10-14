@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/environment.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -10,7 +10,7 @@
           1
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/application.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/application.rb": {
         "lines": [
           1,
           null,
@@ -32,14 +32,14 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/boot.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/boot.rb": {
         "lines": [
           1,
           null,
           1
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/environments/test.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -85,7 +85,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/application_controller_renderer.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -95,7 +95,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/assets.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -113,7 +113,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/backtrace_silencers.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -124,7 +124,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/cookies_serializer.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -133,7 +133,7 @@
           1
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/filter_parameter_logging.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -141,7 +141,7 @@
           1
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/inflections.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -161,7 +161,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/mime_types.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -169,7 +169,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/initializers/wrap_parameters.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -187,53 +187,7 @@
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/config/routes.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          1,
-          null
-        ]
-      },
-      "/Users/lillydaniell/Projects/8_makers/acebook/app/helpers/application_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/lillydaniell/Projects/8_makers/acebook/app/controllers/posts_controller.rb": {
-        "lines": [
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          3,
-          3,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null,
-          1,
-          null,
-          1,
-          3,
-          null,
-          null
-        ]
-      },
-      "/Users/lillydaniell/Projects/8_makers/acebook/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/lillydaniell/Projects/8_makers/acebook/spec/features/user_can_submit_posts_spec.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/config/routes.rb": {
         "lines": [
           1,
           null,
@@ -241,29 +195,101 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          null,
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/spec/models/post_spec.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/borisl/Desktop/PreCourse/iobook/app/controllers/posts_controller.rb": {
         "lines": [
           1,
           null,
           1,
           2,
+          null,
+          null,
+          1,
+          3,
+          3,
+          3,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/app/models/post.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/borisl/Desktop/PreCourse/iobook/spec/features/user_can_submit_posts_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/borisl/Desktop/PreCourse/iobook/spec/models/post_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null
+        ]
+      },
+      "/Users/borisl/Desktop/PreCourse/iobook/app/models/post.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/lillydaniell/Projects/8_makers/acebook/app/models/application_record.rb": {
+      "/Users/borisl/Desktop/PreCourse/iobook/app/models/application_record.rb": {
         "lines": [
           1,
           1,
@@ -271,6 +297,6 @@
         ]
       }
     },
-    "timestamp": 1633963381
+    "timestamp": 1634205103
   }
 }
