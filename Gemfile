@@ -19,7 +19,7 @@ gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'email_validator'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -50,6 +50,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simplecov', require: false, group: :test
 gem 'simplecov-console', require: false, group: :test
+gem 'devise'
 
 group :development, :test do
   gem 'rubocop', '1.20'
