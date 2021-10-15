@@ -1,3 +1,7 @@
+<% if !user_signed_in?%>
+  <% controller.redirect_to "/" %>
+<% end %>
+
 <h1>Edit Post</h1>
 
 <%= render 'form' %>
