@@ -13,25 +13,58 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,200;1,400&display=swap');
- *{
-	 margin:0;
-	 padding:0;
-	 font-family: 'Montserrat', sans-serif;
- }
- body{
-	 height:100vh;
- }
- .container{
-	 display:grid;
-	 grid-template-columns: 2fr 1fr;
- }
- .titleAndTag{
-	 grid-column: 1/2;
- }
- #iobook_logo{
-	 background-image: url('../images/IOBOOK_logo.png');
- }
- .loginContainer{
-	 grid-column: 2/3;
- }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,200;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  --dark-green: #588157;
+  --light-green: #84a98c;
+}
+body {
+  height: 100vh;
+}
+.container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+  padding: 100px;
+}
+.title_and_tag {
+  grid-column: 1/2;
+  padding: 30px;
+}
+#tag_line {
+  margin-top: 30px;
+  font-weight: 400;
+  color: var(--light-green);
+}
+.login_container {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 30px;
+  border: 2px var(--dark-green) solid;
+}
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.login_card {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.sign_in_input {
+  border: 2px solid var(--dark-green);
+  box-sizing: border-box;
+  height: 30px;
+  margin: 5px;
+  padding: 2px;
+}
