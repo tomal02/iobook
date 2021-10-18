@@ -14,3 +14,15 @@ def sign_up
 	fill_in "user_password_confirmation", with: "testpass"
 	click_button "Sign up"
 end
+
+def post
+	visit "/posts"
+	click_link "New post"
+	fill_in "Message", with: "Hello, world!"
+  click_button "Submit"
+end
+
+def edit
+	fill_in "Message", with: "Hello"
+  click_button "Submit"
+end
