@@ -25,27 +25,18 @@ body {
   height: 100vh;
 }
 .container {
-  margin: auto;
+	height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
-  padding: 100px;
 }
 .title_and_tag {
-  grid-column: 1/2;
-  padding: 30px;
+  padding-left: 30px;
 }
 #tag_line {
   margin-top: 30px;
   font-weight: 400;
   color: var(--light-green);
-}
-.login_container {
-  grid-column: 2/3;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  padding: 30px;
-  border: 2px var(--dark-green) solid;
 }
 .sr-only {
   border: 0;
@@ -57,14 +48,86 @@ body {
   position: absolute;
   width: 1px;
 }
-.login_card {
-  grid-row-start: 1;
-  grid-row-end: 4;
+.input_card {
+	margin:auto;
+	box-sizing: border-box;
+	display: grid;
+	grid-row-gap: 10px;
+	justify-items: center;
+	align-items: center;	
+	padding: 10px;
 }
-.sign_in_input {
-  border: 2px solid var(--dark-green);
+.login_card{
+	border: 3px solid #588157;
+}
+.text_input {
+  border: 1px solid var(--dark-green);
   box-sizing: border-box;
   height: 30px;
   margin: 5px;
   padding: 2px;
+	border-radius: 2px;
+	transition: box-shadow 200ms;
+}
+.text_input:hover{
+	cursor: pointer;
+	box-shadow: 2px 2px 4px var(--dark-green);
+}
+.btn{
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: 100px;
+	height: 30px;
+	transition: box-shadow 200ms;
+}
+.btn:hover{
+	cursor: pointer;
+	box-shadow: 2px 2px 4px var(--dark-green);
+}
+.dark_btn{
+	background: var(--dark-green);
+}
+.login_divider{
+	width: 170px;
+	color: #000000;
+}
+.light_btn{
+	background: var(--light-green);
+	margin: 10px;
+}
+#sign_up{
+	position: absolute;
+	display: none;
+	margin: auto;
+	background-color: white;
+	border:2px solid var(--dark-green);
+	box-shadow: 20px 20px 20px rgba(88, 129, 87, 0.5);
+	padding: 30px;
+	border-radius: 20px;	
+}
+.inline{
+	display: inline-block;
+}
+.close_btn{
+	margin-left: 30%;
+	width:50px;
+}
+
+@media only screen and (max-width: 750px) {
+  .container{
+		display:flex;
+		flex-direction: column;
+		margin-top: 75px;
+		justify-items: center;
+	}
+	.title_and_tag{
+		display: flex;
+		flex-direction: column;
+		padding: 50px;
+		width: 340px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
 }

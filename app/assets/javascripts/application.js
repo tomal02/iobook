@@ -12,3 +12,14 @@
 //
 //= require rails-ujs
 //= require_tree .
+
+
+
+function toggleSignUp(){ 
+	let signUp = document.getElementById('sign_up')
+	if (signUp.style.display == "none"){
+		signUp.style.display = "grid";
+	}else{
+		signUp.style.display = "none"
+	}
+}
