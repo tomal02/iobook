@@ -20,6 +20,8 @@
   font-family: 'Montserrat', sans-serif;
   --dark-green: #588157;
   --light-green: #84a98c;
+	--other-green: #E1EAE3;
+	--gray: #808080;
 }
 body {
   height: 100vh;
@@ -113,6 +115,18 @@ body {
 	margin-left: 30%;
 	width:50px;
 }
+#page_container{
+	height:100vh;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+}
+#post_container{
+	border: 2px solid var(--gray);
+	background-color: var(--other-green);
+	border-radius:5px;
+	margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 750px) {
   .container{

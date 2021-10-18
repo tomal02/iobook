@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   
   devise_for :users
   get 'home/index'
-  root to: "home#index"
+  root to: 'home#index'
 
   resources :posts
 
 #   root "posts#index"
-  get "/posts/:id", to: "posts#show"
+  get '/posts/:id', to: 'posts#show'
   
-  end
+end
 
