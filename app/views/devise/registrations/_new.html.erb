@@ -1,0 +1,38 @@
+<div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	<h2 class="inline">Sign up</h2>
+	<button class="light_btn btn inline close_btn" onclick="toggleSignUp()">close</button>
+</div>
+
+
+<%= form_for(resource, :html=> {:class => "input_card"}, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
+  <div>
+    <%= f.label :name, class: %w(sr-only) %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: %w(text_input), placeholder: "Username" %>
+  </div> 
+
+  <div>
+    <%= f.label :email, class: %w(sr-only)%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: %w(text_input), placeholder: "Email" %>
+  </div>
+
+  <div>
+    <%= f.label :password, class: %w(sr-only)%>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> - 10 characters only)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: %w(text_input), placeholder: "Password" %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation, class: %w(sr-only) %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: %w(text_input), placeholder: "Confirm Password" %>
+  </div>
+
+  <%= f.submit "Sign up", class: %w(btn light_btn) %>
+<% end %>

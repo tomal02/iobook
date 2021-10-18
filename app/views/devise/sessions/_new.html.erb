@@ -1,0 +1,24 @@
+<%= form_for(resource, :html=> {:class => "input_card login_card"}, as: resource_name, url: new_user_session_path)	do |f| %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	<div>
+		<%= f.label :email, class: %w(sr-only) %>
+		<%= f.email_field :email, autofocus: true, autocomplete: "email" , class: %w(text_input), placeholder: "Email" %>
+	</div>
+
+	<div>
+		<%= f.label :password, class: %w(sr-only) %>
+		<%= f.password_field :password, autocomplete: "current-password" , class: %w(text_input), placeholder: "Password"	%>
+	</div>
+
+	<div>
+    <%= f.submit "Log in", class: %w(btn dark_btn)%>
+  </div>
+
+	<%= link_to "Forgot your password?", new_password_path(resource_name) %> <br>
+
+	<hr class="login_divider">
+
+	<button type="button" class="btn light_btn" id="sign_up_btn" onclick="toggleSignUp()">Sign up  <i class="fas fa-plus"></i></button>
+
+<% end %>
