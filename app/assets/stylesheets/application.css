@@ -26,6 +26,43 @@
 body {
   height: 100vh;
 }
+nav {
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  position: sticky;
+  border-bottom: 2px solid 
+}
+.home_image {
+  height: 72px;
+  width: 304px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav_image {
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#search_bar {
+  border: 1px solid var(--dark-green);
+  border-radius: 50px;
+  justify-self: start;
+  width: 60%;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 20px;
+  color: var(--light-green);
+}
+.search_input {
+  width: 80%;
+  border: none;
+  color: var(--light-green);
+  padding-left: 10px;
+  font-size: 17px;
+}
 .container {
   height: 100vh;
   display: grid;

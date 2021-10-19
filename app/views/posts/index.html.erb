@@ -2,30 +2,36 @@
   <% controller.redirect_to "/" %>
     <% end %>
 
-      <section id="page_container">
-        <%= link_to 'Sign out' , destroy_user_session_path, method: :delete%>
-          <%= link_to new_post_path do %>
-            New post
-            <% end %>
+      <%= render "layouts/navbar" %>
 
-              <% @posts.each do |post| %>
-                <section id="post_container">
-                  <p>
-                    <%= post.message %>
-                  </p>
-                  <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
-                  <p>
-                    <%= post.created_at.localtime.strftime("%d/%m/%y") %>
-                  </p>
-                  <p>
-                    <%= post.created_at.localtime.strftime("%H:%M") %>
-                  </p>
-                  <aside id="post_options">
-                  <%= link_to 'Edit post' , edit_post_path(post.id) %><br>
-                  <hr class="divider">
-                  <%= link_to 'Delete post' , post_path(post.id), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
-                  </aside>
-                </section>
-                
+        <section id="page_container">
+          <%= link_to 'Edit profile' , edit_user_registration_path %>
+            <%= link_to 'Sign out' , destroy_user_session_path, method: :delete%>
+              <%= link_to new_post_path do %>
+                New post
                 <% end %>
-      </section>
+
+                  <% @posts.each do |post| %>
+                    <section id="post_container">
+                      <div></div>
+                      <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
+                      <div>
+                        <p>
+                          <%= post.created_at.localtime.strftime("%d/%m/%y") %>
+                        </p>
+                        <p>
+                          <%= post.created_at.localtime.strftime("%H:%M") %>
+                        </p>
+                      </div>
+                      <p>
+                        <%= post.message %>
+                      </p>
+                      <aside id="post_options">
+                        <%= link_to 'Edit post' , edit_post_path(post.id) %><br>
+                          <hr class="divider">
+                          <%= link_to 'Delete post' , post_path(post.id), method: :delete, data: {
+                            confirm: "Are you sure you want to delete?" } %>
+                      </aside>
+                    </section>
+                    <% end %>
+        </section>

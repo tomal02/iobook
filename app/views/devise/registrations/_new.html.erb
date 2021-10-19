@@ -8,13 +8,16 @@
 
 <%= form_for(resource, :html=> {:class => "input_card"}, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
 	
   <div>
     <%= f.label :name, class: %w(sr-only) %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name", class: %w(text_input), placeholder: "Username" %>
   </div> 
+
+  <div class="field">
+    <%= f.label "Profile Photo"%>
+    <%= f.file_field :avatar %>
+  </div>
 
   <div>
     <%= f.label :email, class: %w(sr-only)%><br />
