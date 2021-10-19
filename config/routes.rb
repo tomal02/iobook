@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
 #   root "posts#index"
   get "/posts/:id", to: "posts#show"
-  
+  get "/feed", to: "feed#newsfeed"
   end
 
