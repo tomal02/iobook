@@ -9,6 +9,7 @@
 <% end %>
 
 <% @posts.each do |post| %>
+  <p><%= post.name %></p>
   <p><%= simple_format(post.message)   %></p> <br>
   <p><%= post.created_at.localtime.strftime("%H:%M %d/%m/%y") %></p>
 <% end %>

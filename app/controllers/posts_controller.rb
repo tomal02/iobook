@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
       @post.user_id = current_user.id
+      @post.name = current_user.name
       if @post.save
         redirect_to posts_path
       else
@@ -47,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:message, :user_id)
+    params.require(:post).permit(:message, :user_id, :name)
   end
 end
