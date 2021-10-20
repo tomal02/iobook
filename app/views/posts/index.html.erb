@@ -11,6 +11,25 @@
                 New post
                 <% end %>
 
+								<section id="new_post_container">
+									<section id="new_post">
+										<%= form_with url: new_post_path, class: %w(new_post_form) do |form| %>
+
+											<%= form.text_area :message, placeholder: "What's on your mind?" %>
+											
+											<%= button_tag type: 'submit', class: "btn dark_btn" do %>
+												<i class="fas fa-pencil-alt"></i> Post
+											<% end %>
+			
+										<% end %>
+									</section>
+								</section>
+								
+								
+								
+								
+								
+								
                   <% @posts.each do |post| %>
                     <section id="post_container">
                       <div></div>
