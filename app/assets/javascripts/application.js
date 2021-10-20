@@ -23,3 +23,12 @@ function toggleSignUp(){
 		signUp.style.display = "none"
 	}
 }
+
+function togglePostOptions(){
+	let postOptions = document.getElementById('post_options')
+	if (postOptions.style.display == "none"){
+		postOptions.style.display = "grid";
+	}else{
+		postOptions.style.display = "none"
+	}
+}
