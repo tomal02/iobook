@@ -2,9 +2,11 @@ require 'rails_helper'
 require 'feature_helpers'
 
 RSpec.feature "Signed up and logged in", type: :feature do
-  scenario "Can sign up and stay logged in" do
+  scenario "Can log in to an existing account" do
+    sign_up
+    click_on "Sign out"
     login
-		click_button "Sign out"
+		click_on "Sign out"
     expect(page).to have_content("Signed out successfully.")
   end
 end
