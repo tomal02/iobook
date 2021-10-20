@@ -9,7 +9,7 @@
 <% end %>
 
 <% @posts.each do |post| %>
-  <% next if post.id != current_user.id %>
+  <% next if post.user_id != current_user.id %>
   <p><%= simple_format(post.message)   %></p>
   <p><%= post.created_at.localtime.strftime("%H:%M %d/%m/%y") %></p>
   <%= link_to 'Edit post', edit_post_path(post.id) %><br>
