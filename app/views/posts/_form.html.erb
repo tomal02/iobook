@@ -1,6 +1,7 @@
 <% if !user_signed_in?%>
   <% controller.redirect_to "/" %>
 <% end %>
+
 <%= form_for @post do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>

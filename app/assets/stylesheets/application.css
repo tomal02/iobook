@@ -27,13 +27,13 @@
 	 height: 100vh;
  }
  nav {
-  height: 50px;
+  height: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
   position: sticky;
-  border-bottom: 2px solid 
+  border-bottom: 2px solid;
 }
 .home_image {
   height: 72px;
@@ -158,7 +158,7 @@
 	 grid-template-columns: 1fr 2fr 1fr;
  }
  #post_container {
-	 border: 2px solid var(--gray);
+	 border: 1px solid var(--gray);
 	 background-color: var(--other-green);
 	 border-radius: 5px;
 	 margin-top: 20px;
@@ -175,12 +175,14 @@
  }
  #new_post_container {
 	padding: 5px;
+  margin-top: 20px;
 	border: 2px solid var(--gray);
 	border-radius: 5px;
 	background-color: var(--dark-green);
 	grid-column: 2/3;
  }
  #new_post {
+  height: 15vh;
 	border: 2px solid var(--gray);
 	background-color: var(--other-green);
 	border-radius: 5px;
@@ -191,7 +193,7 @@
  }
  .new_post_form {
  }
- textarea{
+  textarea{
 	width: 100%;
 	background-color: transparent;
 	border: none; 

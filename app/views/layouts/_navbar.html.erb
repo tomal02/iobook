@@ -4,7 +4,6 @@
     <input type="text" class="search_input" placeholder="search">
   </div>
   <%= image_tag 'IOBook.png' , class: %w(nav_image) %>
-
-
-
+  <%= link_to 'Edit profile' , edit_user_registration_path %>
+  <%= link_to 'Sign out' , destroy_user_session_path, method: :delete %>
 </nav>
