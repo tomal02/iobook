@@ -46,6 +46,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  #config.action_view.automatically_disable_submit_tag = false
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

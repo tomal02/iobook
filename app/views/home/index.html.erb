@@ -1,19 +1,16 @@
-
-    
-			
 <% if user_signed_in? %>
-	<% controller.redirect_to "/posts/" %>
+  <% controller.redirect_to "/posts/" %>
 <% else %>
 <section class="container">
-	<section class="title_and_tag">
-		<%= image_tag 'IOBOOK_logo.png', style: 'height:72px;width:304px;margin-left: auto;margin-right: auto;' %>
-		<h4 id="tag_line">IOBook helps you connect and share with the programmers in your life</h4>
-	</section>
-	<section>
-		<%= render "/devise/sessions/new" %>
-	</section>
-	<section id="sign_up">
-		<%= render "devise/registrations/new" %>
-	</section>
+  <section class="title_and_tag">
+    <%= image_tag 'IOBOOK_logo.png', style: 'height:72px;width:304px;margin-left: auto;margin-right: auto;' %>
+    <h2 id="tag_line">IOBook helps you connect and share with the programmers in your life</h2>
+  </section>
+  <section>
+    <%= render "/devise/sessions/new" %>
+  </section>
+  <section id="sign_up">
+    <%= render "devise/registrations/new" %>
+  </section>
 </section>
 <%end%>
