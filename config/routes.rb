@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
-#   root "posts#index"
-  get '/posts/:id', to: 'posts#show'
-  
-end
+
+  get "/posts/:id", to: "posts#show"
+  get "/feed", to: "feed#newsfeed"
+  end
 
