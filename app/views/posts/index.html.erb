@@ -17,12 +17,15 @@
 								
   <% @posts.each do |post| %>
     <% next if post.user_id != current_user.id %>
+    <% user_id = post.user_id %>
     <section id="post_container">
     <div>
 	  <p><%= post.name %></p>
-	  <% if current_user.avatar.attached? %>
-    <%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
-    <% end %>
+	  <% if User.find(user_id).avatar.attached? %>
+			<%= image_tag url_for(User.find(user_id).avatar ), class: %w(post_image_size)%>
+    <% else %>
+      <%= image_tag "unknown.png", class: %w(post_image_size) %>
+		<% end %>
   </div>
   <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
   <div>
