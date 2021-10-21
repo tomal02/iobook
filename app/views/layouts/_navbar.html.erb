@@ -5,7 +5,9 @@
   </div>
   <%= image_tag 'IOBook.png' , class: %w(nav_image) %>
 	<div class="links">
-		<%= link_to 'My profile' , posts_path %>
+		
+		<%= link_to 'My Feed' , feed_path %>
+		<%= link_to 'My Profile' , posts_path %>
 		<%= link_to 'Edit profile' , edit_user_registration_path %>
   	<%= link_to 'Sign out' , destroy_user_session_path, method: :delete %>
 	</div>
