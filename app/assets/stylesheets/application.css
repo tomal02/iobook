@@ -27,7 +27,7 @@
 	 height: 100vh;
  }
  nav {
-  height: 60px;
+  height: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -184,19 +184,19 @@
 	border-radius: 5px;
 	background-color: var(--dark-green);
 	grid-column: 2/3;
-	height:200px;
+	height:150px;
  }
- #new_post {
+ .new_post {
 	border: 2px solid var(--gray);
 	background-color: var(--other-green);
 	border-radius: 5px;
 	grid-column: 2/3;
   padding: 5px;
 	display: grid; 
-	height:100%;
+	height:135px;
  }
- .new_post_form { 
-	height:100%;
+ #new_post_button {
+  background: var(--dark-green);
  }
   textarea{
 	width: 100%;

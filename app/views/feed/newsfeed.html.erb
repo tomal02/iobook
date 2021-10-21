@@ -30,21 +30,18 @@
 	<%= render "layouts/navbar" %>
 
   <section id="page_container">
-	<%= link_to new_post_path do %>
-		New post
-	<% end %>
 
-	<section id="new_post_container">
+    <section id="new_post_container">
 		<section id="new_post">
-			<%= form_with(url: posts_path, class: %w(new_post_form)) do |form| %>
-
-				<%= form.text_area :message, placeholder: "What's on your mind?" %>
-				
-				<%= form.submit 'Submit', class: "btn dark_btn"%>
-
-			<% end %>
+			<%= form_for @post do |form| %>
+      <%= form.text_area :message %>
+  
+      <div id="new_post_button" class="btn:hover"><i class="fas fa-pencil-alt"></i>
+      <%= form.submit 'Post' %></div>
+  
+      <% end %>
 		</section>
-	</section>
+  </section>
   	
 	<% @posts.each do |post| %>
 		<section id="post_container">

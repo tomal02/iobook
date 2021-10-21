@@ -1,18 +1,22 @@
 <% if !user_signed_in?%>
   <% controller.redirect_to "/" %>
-    <% end %>
+<% end %>
 
-      <%= render "layouts/navbar" %>
+<%= render "layouts/navbar" %>
 
-      <section id="page_container">
-			<section id="new_post_container">
-				<section id="new_post">
-					<%= form_for @post do |form| %>
-            <%= form.text_area :message %>
-            <%= form.submit 'Submit' %>
-          <% end %>
-				</section>
-			</section>
+<section id="page_container">
+
+  <section id="new_post_container">
+		<section id="new_post">
+			<%= form_for @post do |form| %>
+      <%= form.text_area :message %>
+  
+      <div id="new_post_button" class="btn:hover"><i class="fas fa-pencil-alt"></i>
+      <%= form.submit 'Post' %></div>
+  
+      <% end %>
+		</section>
+  </section>
                 
 								
   <% @posts.each do |post| %>
@@ -37,6 +41,7 @@
   <%# </aside> %>
   </section>
   <% end %>
-  </section>
+
+</section>
 
 
