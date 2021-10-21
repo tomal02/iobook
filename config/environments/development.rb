@@ -38,6 +38,12 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
+	# Store files locally.
+	config.active_storage.service = :local
+
+	# Store uploaded files on the local file system in a temporary directory.
+	config.active_storage.service = :test
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.

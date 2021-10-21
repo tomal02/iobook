@@ -1,8 +1,9 @@
-<% if !user_signed_in?%>
+<% if !user_signed_in? %>
   <% controller.redirect_to "/" %>
 <% end %>
 
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete%>
+<%= render "layouts/navbar" %>
+
 
 <%= link_to new_post_path do %>
   New post
