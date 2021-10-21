@@ -15,6 +15,7 @@ class FeedController < ApplicationController
   # end
 
   def newsfeed
+    @post = Post.new
     @posts = Post.all.order("created_at DESC")
   end
 
