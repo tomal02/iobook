@@ -29,7 +29,7 @@
 								
                   <% @posts.each do |post| %>
           					<% next if post.user_id != current_user.id %>
-  								
+
                     <section id="post_container">
                       <div>
 												<p><%= post.name %></p>
@@ -41,10 +41,13 @@
                       <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
                       <div>
                         <p>
-                          <%= post.created_at.localtime.strftime("%d/%m/%y") %>
+                        <%= post.name %>
                         </p>
                         <p>
                           <%= post.created_at.localtime.strftime("%H:%M") %>
+                        </p>
+                        <p>
+                          <%= post.created_at.localtime.strftime("%d/%m/%y") %>
                         </p>
                       </div>
                       <p>
