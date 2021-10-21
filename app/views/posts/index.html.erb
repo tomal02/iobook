@@ -34,8 +34,8 @@
                       <div>
 												<p><%= post.name %></p>
 												
-												<% if post.user_id.avatar.attached? %>
-													<%= image_tag url_for(post.user_id.avatar), class: %w(post_image_size)%>
+												<% if current_user.avatar.attached? %>
+													<%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
 												<% end %>
 											</div>
                       <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
