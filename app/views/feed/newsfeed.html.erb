@@ -36,13 +36,10 @@
 
 	<section id="new_post_container">
 		<section id="new_post">
-			<%= form_with(url: posts_path, class: %w(new_post_form)) do |form| %>
-
-				<%= form.text_area :message, placeholder: "What's on your mind?" %>
-				
-				<%= form.submit 'Submit', class: "btn dark_btn"%>
-
-			<% end %>
+			<%= form_for @post do |form| %>
+        <%= form.text_area :message %>
+        <%= form.submit 'Submit' %>
+      <% end %>
 		</section>
 	</section>
   	
