@@ -9,6 +9,14 @@
   New post
 <% end %>
 
+                    <section id="new_post_container">
+									<section id="new_post">
+										<%= form_for @post do |form| %>
+                      <%= form.text_area :message %>
+                      <%= form.submit 'Submit' %>
+                    <% end %>
+									</section>
+								</section>
 <% @posts.each do |post| %>
   <p><%= post.name %></p>
   <p><%= simple_format(post.message)   %></p> <br>
