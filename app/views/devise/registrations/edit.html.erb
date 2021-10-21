@@ -36,6 +36,44 @@
     <%= f.file_field :avatar %>
   </div>
 
+  <h1> About you </h1>
+
+  <div class="field">
+    <%= f.label "name"%>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "country"%>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label "favourite language"%>
+    <%= f.text_field :languages %>
+  </div>
+
+  <div class="field">
+    <%= f.label "ide"%>
+    <%= f.text_field :ide %>
+  </div>
+
+  <div class="field">
+    <%= f.label "github link"%>
+    <%= f.text_field :github %>
+  </div>
+
+  <div class="field">
+    <%= f.label "linkedin"%>
+    <%= f.text_field :linkedin %>
+  </div>
+
+  <div class="field">
+    <%= f.label "twitter"%>
+    <%= f.text_field :twitter %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
