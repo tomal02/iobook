@@ -27,39 +27,39 @@
 								
 								
 								
-                  <% @posts.each do |post| %>
-          					<% next if post.user_id != current_user.id %>
+								<% @posts.each do |post| %>
+									<% next if post.user_id != current_user.id %>
 
-                    <section id="post_container">
-                      <div>
-												<p><%= post.name %></p>
-												
-												<% if current_user.avatar.attached? %>
-													<%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
-												<% end %>
-											</div>
-                      <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
-                      <div>
-                        <p>
-                        <%= post.name %>
-                        </p>
-                        <p>
-                          <%= post.created_at.localtime.strftime("%H:%M") %>
-                        </p>
-                        <p>
-                          <%= post.created_at.localtime.strftime("%d/%m/%y") %>
-                        </p>
-                      </div>
-                      <p>
-                          <p><%= simple_format(post.message)   %></p>
-                      </p>
-                      <aside id="post_options">
-                        <%= link_to 'Edit post' , edit_post_path(post.id) %><br>
-                          <hr class="divider">
-                          <%= link_to 'Delete post' , post_path(post.id), method: :delete, data: {
-                            confirm: "Are you sure you want to delete?" } %>
-                      </aside>
-                    </section>
-                    <% end %>
+									<section id="post_container">
+										<div>
+											<p><%= post.name %></p>
+											
+											<% if current_user.avatar.attached? %>
+												<%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
+											<% end %>
+										</div>
+										<button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
+										<div>
+											<p>
+											<%= post.name %>
+											</p>
+											<p>
+												<%= post.created_at.localtime.strftime("%H:%M") %>
+											</p>
+											<p>
+												<%= post.created_at.localtime.strftime("%d/%m/%y") %>
+											</p>
+										</div>
+										<p>
+												<p><%= simple_format(post.message)   %></p>
+										</p>
+										<aside id="post_options">
+											<%= link_to 'Edit post' , edit_post_path(post.id) %><br>
+												<hr class="divider">
+												<%= link_to 'Delete post' , post_path(post.id), method: :delete, data: {
+													confirm: "Are you sure you want to delete?" } %>
+										</aside>
+									</section>
+									<% end %>
         </section>
 
