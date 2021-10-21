@@ -28,10 +28,16 @@
 								
 								
                   <% @posts.each do |post| %>
-          <% next if post.user_id != current_user.id %>
-  <p><%= post.name %></p>
+          					<% next if post.user_id != current_user.id %>
+  								
                     <section id="post_container">
-                      <div></div>
+                      <div>
+												<p><%= post.name %></p>
+												
+												<% if post.user_id.avatar.attached? %>
+													<%= image_tag url_for(post.user_id.avatar), class: %w(post_image_size)%>
+												<% end %>
+											</div>
                       <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
                       <div>
                         <p>

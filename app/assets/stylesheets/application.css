@@ -63,6 +63,9 @@
   padding-left: 10px;
   font-size: 17px;
 }
+.links{
+	display: grid;
+}
  .container {
 	 height: 100vh;
 	 display: grid;
@@ -180,24 +183,29 @@
 	border-radius: 5px;
 	background-color: var(--dark-green);
 	grid-column: 2/3;
+	height:250px;
  }
  #new_post {
-  height: 15vh;
 	border: 2px solid var(--gray);
 	background-color: var(--other-green);
 	border-radius: 5px;
 	grid-column: 2/3;
   padding: 5px;
-	display: grid;
-  grid-template-rows: 2; 
+	display: grid; 
+	height:100%;
  }
- .new_post_form {
+ .new_post_form { 
+	height:100%;
  }
   textarea{
 	width: 100%;
 	background-color: transparent;
 	border: none; 
 	resize: none;
+ }
+ .post_image_size{
+	width:100px;
+	height:100px;
  }
  
 
