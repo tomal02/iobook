@@ -6,28 +6,24 @@
 
 <section id="page_container">
 
-<section id="user_info_box">
-
-<h3><strong><%= current_user.name %></strong></h3><br>
-<div id="profile-info">
-  <p>Country: <strong><%= current_user.country %></strong></p><br>
-  <p>Language: <strong><%= current_user.languages %></strong></p><br>
-  <p>IDE: <strong><%= current_user.ide %></strong></p><br>
-  <p><i class="fab fa-github"></i> <strong><%= current_user.github %></strong></p>
-  <p><i class="fab fa-twitter"></i> <strong><%= current_user.twitter %></strong></p>
-  <p><i class="fab fa-linkedin-in"></i> <strong><%= current_user.linkedin %></strong></p>
-</div>
-</section>
-
+  <section id="user_info_box">
+  <h3><strong><%= current_user.name %></strong></h3><br>
+  <div id="profile-info">
+    <p>Country: <strong><%= current_user.country %></strong></p><br>
+    <p>Language: <strong><%= current_user.languages %></strong></p><br>
+    <p>IDE: <strong><%= current_user.ide %></strong></p><br>
+    <p><a href="https://www.github.com"></a><i class="fab fa-github"></i> <strong><%= current_user.github %></strong></p>
+    <p><i class="fab fa-twitter"></i> <strong><%= current_user.twitter %></strong></p>
+    <p><i class="fab fa-linkedin-in"></i> <strong><%= current_user.linkedin %></strong></p>
+  </div>
+  </section>
 
   <section id="new_post_container">
 		<section id="new_post">
 			<%= form_for @post do |form| %>
       <%= form.text_area :message %>
-  
-      <div id="new_post_button" class="btn:hover"><i class="fas fa-pencil-alt"></i>
-      <%= form.submit 'Post', placeholder: "What's on your mind?"%></div>
-  
+      <div id="new_post_button" class="btn"><i class="fas fa-pencil-alt"></i>
+      <%= form.submit 'Post' %></div>
       <% end %>
 		</section>
   </section>
@@ -38,27 +34,26 @@
     <section id="post_container">
     <div>
     <br>
-	  <p><%= post.name %></p>
+	  <p><<%= post.name %></p>
 	    <% if current_user.avatar.attached? %>
         <%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
       <% end %>
     </div>
 
 
-    <button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
+    <button onclick="togglePostOptions()" class="blank_btn"></button>
     <div>
       <p><%= post.created_at.localtime.strftime("%H:%M") %></p>
       <p><%= post.created_at.localtime.strftime("%d/%m/%y") %></p>
     </div>
 
     <div id="message">
-    <p><%= simple_format(post.message) %></p>
+    <p><strong><%= simple_format(post.message) %></strong></p>
     </div>
-  <%# <aside id="post_options"> %>
-  <%= link_to 'Edit post' , edit_post_path(post.id) %><br>
-  <%# <hr class="divider"> %>
-  <%= link_to 'Delete post' , post_path(post.id), method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
-  <%# </aside> %>
+
+  <%= link_to 'Edit post', edit_post_path(post.id) %><br>
+  <%= link_to 'Delete post', post_path(post.id), method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
+ 
   </section>
   <% end %>
 

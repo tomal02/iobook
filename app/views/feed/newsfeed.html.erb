@@ -11,7 +11,7 @@
 			<%= form_for @post do |form| %>
       <%= form.text_area :message %>
   
-      <div id="new_post_button" class="btn:hover"><i class="fas fa-pencil-alt"></i>
+      <div id="new_post_button" class="btn"><i class="fas fa-pencil-alt"></i>
       <%= form.submit 'Post' %></div>
   
       <% end %>
@@ -27,7 +27,7 @@
 					<%= image_tag url_for(current_user.avatar), class: %w(post_image_size)%>
 				<% end %>
 			</div>
-			<button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
+			<button onclick="togglePostOptions()" class="blank_btn"></button>
 			<div>
 				<p>
 					<%= post.created_at.localtime.strftime("%H:%M") %>
