@@ -168,6 +168,7 @@
 	 grid-column: 2/3;
 	 display: grid;
 	 grid-template: 1fr 4fr / 1fr 4fr;
+	 height: 150px;
  }
  .blank_btn {
 	border: none;
@@ -183,7 +184,7 @@
 	border-radius: 5px;
 	background-color: var(--dark-green);
 	grid-column: 2/3;
-	height:250px;
+	height:200px;
  }
  #new_post {
 	border: 2px solid var(--gray);
