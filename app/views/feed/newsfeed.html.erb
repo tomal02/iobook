@@ -1,5 +1,3 @@
-	<% require 'pg' %>
-  
   <% if !user_signed_in?%>
 		<% controller.redirect_to "/" %>
 	<% end %>	
@@ -7,18 +5,16 @@
 	<%= render "layouts/navbar" %>
 
   <section id="page_container">
-	<%= link_to new_post_path do %>
-		New post
-	<% end %>
 
-	<section id="new_post_container">
+    <section id="new_post_container">
 		<section id="new_post">
 			<%= form_for @post do |form| %>
-        <%= form.text_area :message %>
-        <%= form.submit 'Submit' %>
+      <%= form.text_area :message %>
+      <div id="new_post_button" class="btn"><i class="fas fa-pencil-alt"></i>
+      <%= form.submit 'Post' %></div>
       <% end %>
 		</section>
-	</section>
+  </section>
   	
 	<% @posts.each do |post| %>
 
@@ -34,16 +30,10 @@
           <%= image_tag "unknown.png", class: %w(post_image_size) %>
 				<% end %>
 			</div>
-			<button onclick="togglePostOptions()" class="blank_btn"><i class="fas fa-ellipsis-h"></i></button>
+			<button onclick="togglePostOptions()" class="blank_btn"></button>
 			<div>
-				<p>
-				</p>
-				<p>
-					<%= post.created_at.localtime.strftime("%H:%M") %>
-				</p>
-				<p>
-					<%= post.created_at.localtime.strftime("%d/%m/%y") %>
-				</p>
+				<p><%= post.created_at.localtime.strftime("%H:%M") %></p>
+				<p><%= post.created_at.localtime.strftime("%d/%m/%y") %></p>
 			</div>
 			<p>
 					<p><%= simple_format(post.message)   %></p>

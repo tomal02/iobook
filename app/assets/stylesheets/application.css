@@ -27,7 +27,7 @@
 	 height: 100vh;
  }
  nav {
-  height: 60px;
+  height: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -160,6 +160,18 @@
 	 display: grid;
 	 grid-template-columns: 1fr 2fr 1fr;
  }
+#user_info_box {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  grid-column: 1/2;
+	height: 250px;
+  padding: 10px;
+  background-color: var(--other-green);
+}
+
  #post_container {
 	 border: 1px solid var(--gray);
 	 background-color: var(--other-green);
@@ -169,6 +181,12 @@
 	 display: grid;
 	 grid-template: 1fr 4fr / 1fr 4fr;
 	 height: 150px;
+ }
+ #message {
+  grid-template: 2fr 3fr;
+ }
+ #profile-info {
+   font-size: small;
  }
  .blank_btn {
 	border: none;
@@ -184,19 +202,20 @@
 	border-radius: 5px;
 	background-color: var(--dark-green);
 	grid-column: 2/3;
-	height:200px;
+	height:150px;
  }
- #new_post {
+ .new_post {
 	border: 2px solid var(--gray);
 	background-color: var(--other-green);
 	border-radius: 5px;
 	grid-column: 2/3;
   padding: 5px;
 	display: grid; 
-	height:100%;
+	height:135px;
  }
- .new_post_form { 
-	height:100%;
+ #new_post_button {
+  background: var(--dark-green);
+  
  }
   textarea{
 	width: 100%;
