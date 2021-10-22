@@ -29,15 +29,15 @@
 	<section id="middle_column">
 		<section id="new_post_container">
 			<%= form_for @post, :html => {:id => 'new_post', :class => 'class'} do |form| %>
-				<%= form.text_area :message, placeholder: "What's on your mind?" %>
+				<%= form.text_area :message, placeholder: "What's on your mind?"  %>
 				<div id="new_post_button">
 					<i class="fas fa-pencil-alt"></i>
 					<%= form.submit 'Post', class: %w(blank_btn)%>
 				</div>
 			<% end %>
 		</section>
-												
-		<% @posts.each do |post| %>
+		<section id="posts_scroller">
+<% @posts.each do |post| %>
 			<% next if post.user_id != current_user.id %>
 			<% user_id = post.user_id %>
 			<section id="post_container">
@@ -54,12 +54,7 @@
 				</div>
 
 				<div>
-					<p>
-						<%= post.created_at.localtime.strftime("%H:%M") %>
-					</p>
-					<p>
-						<%= post.created_at.localtime.strftime("%d/%m/%y") %>
-					</p>
+						Posted at: <%= post.created_at.localtime.strftime("%H:%M") %> on: <%= post.created_at.localtime.strftime("%d/%m/%y") %>
 				</div>
 
 				<div>
@@ -78,6 +73,8 @@
 		
 			</section>
 		<% end %>
+		</section>					
+		
 	</section>
   
 

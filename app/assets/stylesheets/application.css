@@ -230,6 +230,7 @@ textarea:focus{
 .post_image_size{
 	width:100px;
 	height:100px;
+	border: 1px solid var(--gray)
 }
 #post_container {
 	border: 2px solid var(--gray);
@@ -249,6 +250,7 @@ textarea:focus{
 	padding-right: 2000px;
 	height: 738px;
 	padding-bottom: 0;
+	margin-top:25px;
 }
  
 

@@ -1,5 +1,5 @@
-<p><%=# post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-<%=# button_to 'Like', post_likes_path(post), method: :post %>
+
+
 
 <% if !user_signed_in?%>
   <% controller.redirect_to "/" %>
@@ -12,7 +12,7 @@
 	<section id="middle_column">
 		<section id="new_post_container">
 			<%= form_for @post, :html => {:id => 'new_post', :class => 'class'} do |form| %>
-				<%= form.text_area :message %>
+				<%= form.text_area :message, placeholder: "What's on your mind?"  %>
 				<div id="new_post_button">
 					<i class="fas fa-pencil-alt"></i>
 					<%= form.submit 'Post', class: %w(blank_btn)%>
@@ -37,12 +37,12 @@
 					</div>
 
 					<div>
+						<p><%= post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
 						Posted at: <%= post.created_at.localtime.strftime("%H:%M") %> on: <%= post.created_at.localtime.strftime("%d/%m/%y") %>
 					</div>
 
 					<div>
-						<%= link_to 'Edit post', edit_post_path(post.id) %><br>
-						<%= link_to 'Delete post', post_path(post.id), method: :delete, data: { confirm: "Are you sure you want to delete?" } %>
+						<%= button_to 'Like', post_likes_path(post), class: %w{btn dark_btn}, method: :post %>
 					</div>
 					
 					<div id="message">
