@@ -176,6 +176,7 @@
 	background: linear-gradient(180.67deg, #B1C8B6 4.62%, #588157 96.55%);
 	grid-column: 2/3;
 	padding:20px;
+	padding-bottom: 0;
 }
 
 #message {
@@ -232,6 +233,11 @@ textarea:focus{
 	height:100px;
 	border: 1px solid var(--gray)
 }
+.post_attachment_size{
+	width:200px;
+	height:200px;
+	border: 1px solid var(--gray);
+}
 #post_container {
 	border: 2px solid var(--gray);
 	background-color: var(--other-green);
@@ -248,8 +254,7 @@ textarea:focus{
 	margin-left: 15px;
 	margin-right: -2000px;
 	padding-right: 2000px;
-	height: 738px;
-	padding-bottom: 0;
+	height: 717px;
 	margin-top:25px;
 }
  

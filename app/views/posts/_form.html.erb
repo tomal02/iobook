@@ -4,6 +4,7 @@
 
 <%= form_for @post do |form| %>
   <%= form.text_area :message %>
+  <%= form.file_field :avatar %>
   <%= form.submit 'Submit' %>
 <% end %>
 
