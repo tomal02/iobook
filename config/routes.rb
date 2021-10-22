@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get 'home/index'
   root to: 'home#index'
 
-  resources :posts
+  resources :posts do
+    resources :likes
+  end
 
 
   get "/posts/:id", to: "posts#show"

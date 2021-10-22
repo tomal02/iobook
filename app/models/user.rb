@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[github]
 
   has_one_attached :avatar
+  has_many :likes, dependent: :destroy
   
 	validates :email, email: true
 
