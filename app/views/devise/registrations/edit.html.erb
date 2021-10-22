@@ -1,3 +1,5 @@
+<div id="edit_user_page">
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, :html=> {:class => "input_card", method: :put}, url: registration_path(resource_name)) do |f| %>
@@ -12,7 +14,7 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="display: grid; justify-items: center;">
     <%= f.label :password, class: %w(sr-only)  %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" , class: %w(text_input), placeholder: "new password" %>
     <% if @minimum_password_length %>
@@ -71,7 +73,7 @@
 
 <h2> Submit </h2>
 
-  <div class="field">
+  <div class="field" style="display: grid; justify-items: center;">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
@@ -88,3 +90,5 @@
 
 <%= link_to "Back", :back %>
 
+
+</div>

@@ -38,7 +38,7 @@
 			<% end %>
 		</section>
 		<section id="posts_scroller">
-<% @posts.each do |post| %>
+			<% @posts.each do |post| %>
 			<% next if post.user_id != current_user.id %>
 			<% user_id = post.user_id %>
 			<section id="post_container">

@@ -2,11 +2,17 @@
   <% controller.redirect_to "/" %>
 <% end %>
 
-<%= form_for @post do |form| %>
-  <%= form.text_area :message %>
-  <%= form.file_field :avatar %>
-  <%= form.submit 'Submit' %>
-<% end %>
+<section id="new_post_container" >
+			<%= form_for @post, :html => {:id => 'new_post', :class => 'class'} do |form| %>
+				<%= form.text_area :message, placeholder: "What's on your mind?"  %>
+				<%= form.file_field :avatar %>
+				<div id="new_post_button">
+					<i class="fas fa-pencil-alt"></i>
+					<%= form.submit 'Post', class: %w(blank_btn)%>
+				</div>
+			<% end %>
+		</section>
+
 
 
 

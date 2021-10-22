@@ -33,12 +33,7 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  position: sticky;
-  border-bottom: 2px solid;
-}
-.home_image {
-  height: 72px;
-  width: 304px;
+  position: stickalign-self: end;
   margin-left: auto;
   margin-right: auto;
 }
@@ -257,7 +252,17 @@ textarea:focus{
 	height: 717px;
 	margin-top:25px;
 }
- 
+#edit_post_page{
+	display:grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.edit_post_form{
+	grid-column: 2/3;
+}
+#edit_user_page{
+	display: grid;
+	justify-items: center;
+}
 
  @media only screen and (max-width: 750px) {
 	 .container {

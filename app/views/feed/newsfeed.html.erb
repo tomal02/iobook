@@ -13,7 +13,7 @@
 		<section id="new_post_container">
 			<%= form_for @post, :html => {:id => 'new_post', :class => 'class'} do |form| %>
 				<%= form.text_area :message, placeholder: "What's on your mind?"  %>
-				<%= form.file_field :avatar %>
+				<%= form.file_field :avatar, :html => {:class => 'fas fa-paperclip'} %>
 				<div id="new_post_button">
 					<i class="fas fa-pencil-alt"></i>
 					<%= form.submit 'Post', class: %w(blank_btn)%>
@@ -33,12 +33,12 @@
 					</div>
 
 					<div>
-						<p><%= post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+						<p><i class="fas fa-thumbs-up" style="color: var(--dark-green)"></i> <%= post.likes.count %></p>
 						Posted at: <%= post.created_at.localtime.strftime("%H:%M") %> on: <%= post.created_at.localtime.strftime("%d/%m/%y") %>
 					</div>
 
 					<div>
-					<% if User.find(user_id).avatar.attached? %>
+						<% if User.find(user_id).avatar.attached? %>
 							<%= image_tag url_for(User.find(user_id).avatar ), class: %w(post_image_size)%>
 						<% else %>
 							<%= image_tag "unknown.png", class: %w(post_image_size) %>
@@ -48,12 +48,12 @@
 					
 					<div id="message">
 						<p>
-						<strong>
-							<%= simple_format(post.message) %>
-						</strong>
-						<% if post.avatar.attached?%>
-							<%= image_tag url_for(post.avatar), class: %w(post_attachment_size)%>
-						<% end %>
+							<strong>
+								<%= simple_format(post.message) %>
+							</strong>
+							<% if post.avatar.attached?%>
+								<%= image_tag url_for(post.avatar), class: %w(post_attachment_size)%>
+							<% end %>
 						</p>
 					</div>
 					
