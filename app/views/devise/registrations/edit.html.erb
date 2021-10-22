@@ -1,11 +1,11 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, :html=> {:class => "input_card", method: :put}, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: %w(sr-only)  %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: %w(text_input), placeholder: "Username" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,8 +13,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :password, class: %w(sr-only)  %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password" , class: %w(text_input), placeholder: "new password" %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em>
@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, class: %w(sr-only)  %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: %w(text_input), placeholder: "password confirmation"  %>
   </div>
   
   <div class="field">
@@ -34,38 +34,38 @@
   <h1> About you </h1>
 
   <div class="field">
-    <%= f.label "name"%>
-    <%= f.text_field :name %>
+    <%= f.label "name", class: %w(sr-only) %>
+    <%= f.text_field :name, class: %w(text_input), placeholder: "Username"  %>
   </div>
 
   <div class="field">
-    <%= f.label "country"%>
-    <%= f.text_field :country %>
+    <%= f.label "country", class: %w(sr-only) %>
+    <%= f.text_field :country, class: %w(text_input), placeholder: "country"  %>
   </div>
 
   <div class="field">
-    <%= f.label "favourite language"%>
-    <%= f.text_field :languages %>
+    <%= f.label "favourite language", class: %w(sr-only) %>
+    <%= f.text_field :languages, class: %w(text_input), placeholder: "languages"  %>
   </div>
 
   <div class="field">
-    <%= f.label "ide"%>
-    <%= f.text_field :ide %>
+    <%= f.label "ide", class: %w(sr-only) %>
+    <%= f.text_field :ide, class: %w(text_input), placeholder: "ide"  %>
   </div>
 
   <div class="field">
-    <%= f.label "github link"%>
-    <%= f.text_field :github %>
+    <%= f.label "github link", class: %w(sr-only) %>
+    <%= f.text_field :github, class: %w(text_input), placeholder: "github"  %>
   </div>
 
   <div class="field">
-    <%= f.label "linkedin"%>
-    <%= f.text_field :linkedin %>
+    <%= f.label "linkedin", class: %w(sr-only) %>
+    <%= f.text_field :linkedin, class: %w(text_input), placeholder: "linkedin"  %>
   </div>
 
   <div class="field">
-    <%= f.label "twitter"%>
-    <%= f.text_field :twitter %>
+    <%= f.label "twitter", class: %w(sr-only) %>
+    <%= f.text_field :twitter, class: %w(text_input), placeholder: "twitter"  %>
   </div>
 
 
