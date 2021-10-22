@@ -7,21 +7,29 @@
 <section id="page_container">
 
   <section id="user_info_box">
-  <h3><strong><%= current_user.name %></strong></h3><br>
-  <div id="profile-info">
-    <p>Country: <strong><%= current_user.country %></strong></p><br>
-    <p>Language: <strong><%= current_user.languages %></strong></p><br>
-    <p>IDE: <strong><%= current_user.ide %></strong></p><br>
-    <p><a href="https://www.github.com"></a><i class="fab fa-github"></i> <strong><%= current_user.github %></strong></p>
-    <p><i class="fab fa-twitter"></i> <strong><%= current_user.twitter %></strong></p>
-    <p><i class="fab fa-linkedin-in"></i> <strong><%= current_user.linkedin %></strong></p>
-  </div>
+    <h3><strong><%= current_user.name %></strong></h3><br>
+    <% if User.find(current_user.id).avatar.attached? %>
+			<%= image_tag url_for(User.find(current_user.id).avatar), class: %w(post_image_size)%>
+    <% else %>
+      <%= image_tag "unknown.png", class: %w(post_image_size) %>
+		<% end %>
+    
+    <div id="profile-info">
+      <p><br>Country: <strong><%= current_user.country %></strong></p>
+      <p>Language(s): <strong><%= current_user.languages %></strong></p>
+      <p>IDE: <strong><%= current_user.ide %></strong></p><br>
+    </div>
+    <h1>
+      <a href="<%= current_user.github %>" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> 
+      <a href="<%= current_user.twitter %>" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+      <a href="<%= current_user.linkedin %>" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+    </h1>
   </section>
 
 	<section id="middle_column">
 		<section id="new_post_container">
 			<%= form_for @post, :html => {:id => 'new_post', :class => 'class'} do |form| %>
-				<%= form.text_area :message %>
+				<%= form.text_area :message, placeholder: "What's on your mind?" %>
 				<div id="new_post_button">
 					<i class="fas fa-pencil-alt"></i>
 					<%= form.submit 'Post', class: %w(blank_btn)%>
