@@ -29,8 +29,8 @@
   <section id="new_post_container">
 		<section id="new_post">
 			<%= form_for @post do |form| %>
-      <textarea placeholder="What's on your mind?" <%= form.text_area :message %> 
-      <div id="new_post_button" class="btn"><i class="fas fa-pencil-alt"></i>
+      <%= form.text_area :message, placeholder: "What's on your mind?"%> 
+      <div id="new_post_button" class="btn" ><i class="fas fa-pencil-alt"></i>
       <%= form.submit 'Post' %></div>
       <% end %>
 		</section>
